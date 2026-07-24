@@ -52,7 +52,7 @@ export default function SkillsForm() {
       <h2>Your Skills</h2>
       <p style={{ color: "#666" }}>
         Add the languages you want to focus on, and how comfortable you are with each.
-        This drives your issue recommendations - no GitHub auto-detection here, just what you tell us.
+        This drives your issue recommendations — no GitHub auto-detection here, just what you tell us.
       </p>
 
       <div style={{ display: "flex", gap: "0.5rem", marginBottom: "1rem" }}>
@@ -85,7 +85,7 @@ export default function SkillsForm() {
             }}
           >
             <span>
-              {s.language} - <em>{s.comfortLevel}</em>
+              {s.language} — <em>{s.comfortLevel}</em>
             </span>
             <button onClick={() => removeSkill(i)}>Remove</button>
           </li>

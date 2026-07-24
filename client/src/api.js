@@ -17,5 +17,6 @@ export async function apiFetch(path, options = {}) {
     throw new Error(body.error || `Request failed: ${res.status}`);
   }
 
+  // DELETE routes may return no body
   return res.status === 204 ? null : res.json();
 }

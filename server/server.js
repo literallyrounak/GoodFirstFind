@@ -8,6 +8,8 @@ const authRoutes = require("./routes/auth");
 const usersRoutes = require("./routes/users");
 const issuesRoutes = require("./routes/issues");
 const questsRoutes = require("./routes/quests");
+const recommendationsRoutes = require("./routes/recommendations");
+const startSyncJob = require("./jobs/syncIssues");
 
 const app = express();
 
@@ -24,6 +26,7 @@ app.use("/api/auth", authRoutes);
 app.use("/api/users", usersRoutes);
 app.use("/api/issues", issuesRoutes);
 app.use("/api/quests", questsRoutes);
+app.use("/api/recommendations", recommendationsRoutes);
 
 app.get("/api/health", (req, res) => {
   res.json({ status: "ok", time: new Date().toISOString() });
@@ -36,6 +39,7 @@ mongoose
   .then(() => {
     console.log("MongoDB connected");
     app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+    startSyncJob();
   })
   .catch((err) => {
     console.error("MongoDB connection error:", err);

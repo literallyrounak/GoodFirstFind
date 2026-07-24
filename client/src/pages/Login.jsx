@@ -7,7 +7,7 @@ export default function Login() {
 
   return (
     <div style={{ textAlign: "center", marginTop: "4rem" }}>
-      <h1>Quest Board</h1>
+      <h1>GoodFirstFind</h1>
       <p>Find beginner-friendly open-source issues, matched to you.</p>
       <button onClick={handleLogin} style={{ padding: "0.75rem 1.5rem", fontSize: "1rem" }}>
         Log in with GitHub

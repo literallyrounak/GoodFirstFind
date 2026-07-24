@@ -7,7 +7,7 @@ const UserSchema = new mongoose.Schema(
     displayName: { type: String },
     avatarUrl: { type: String },
     profileUrl: { type: String },
-    accessToken: { type: String }, 
+    accessToken: { type: String },
 
     skills: [
       {

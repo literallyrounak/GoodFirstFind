@@ -52,7 +52,7 @@ export default function QuestList() {
 
       {quests.length === 0 && (
         <p style={{ color: "#888" }}>
-          No quests yet - go to Browse Issues and save one to get started.
+          No quests yet — go to Browse Issues and save one to get started.
         </p>
       )}
 

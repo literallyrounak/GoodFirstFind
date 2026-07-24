@@ -10,7 +10,7 @@ export default function IssueBrowser() {
   const [label, setLabel] = useState(LABEL_OPTIONS[0]);
   const [issues, setIssues] = useState([]);
   const [savedIds, setSavedIds] = useState(new Set());
-  const [status, setStatus] = useState(null); // null | "loading" | error string
+  const [status, setStatus] = useState(null);
 
   const search = async () => {
     setStatus("loading");
